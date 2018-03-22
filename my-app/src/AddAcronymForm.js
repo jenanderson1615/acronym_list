@@ -5,9 +5,17 @@ class AddAcronymForm extends Component {
         return (
             <div>
                 <form>
-                    Enter Acronym: <input type="text"></input><br></br>
-                    Enter Acronym Definition: <input type="text"></input><br></br>
-                    <input type="submit" value="Submit"></input><br></br>
+                    <div>
+                        <label>Enter Acronym: </label>
+                        <input type="text"></input>
+                    </div>
+                    <div>
+                        <label>Enter Acronym Definition: </label>
+                         <input type="text"></input>
+                    </div>
+                    <div>
+                        <button className = 'ui basic blue button'>Submit</button>
+                    </div>    
                 </form>
             </div>
         );

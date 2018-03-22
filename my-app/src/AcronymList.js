@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import AcronymEntry from './AcronymEntry'
 
-class AcronymList extends Component {
-  render() {
-      return(
-        <div>
-            <h1>List</h1>
-            <AcronymEntry 
-                acronym='afaik'
-                meaning='as far as I know'
-            />
+class AcronymList extends React.Component {
+    render() {
+        const acronyms = this.props.acronyms.map((acronym) => (
             <AcronymEntry
-                acronym='lol'
-                meaning='laugh out loud'
+                acronym={acronym.acronym}
+                meaning={acronym.meaning}
             />
-        </div>
-      );
-  }
+        ));
+
+        return (
+            <div id='acronyms'>
+                {acronyms}
+            </div>
+        );
+    }
 }
 
 export default AcronymList;
