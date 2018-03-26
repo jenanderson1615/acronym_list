@@ -3,15 +3,16 @@ import AcronymEntry from './AcronymEntry'
 
 class AcronymList extends React.Component {
     render() {
-        const acronyms = this.props.acronyms.map((acronym) => (
+        const acronyms = this.props.acronyms.map((acronymItem) => (
             <AcronymEntry
-                acronym={acronym.acronym}
-                meaning={acronym.meaning}
+                key={acronymItem.key}
+                acronym={acronymItem.acronym}
+                meaning={acronymItem.meaning}
             />
         ));
 
         return (
-            <div id='acronyms'>
+            <div>
                 {acronyms}
             </div>
         );
